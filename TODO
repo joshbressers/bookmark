@@ -8,6 +8,7 @@ Things that need to or should be done to make this thing not suck as bad.
   the browser buttons.
 * Stop using the base_uri variable (there are nicer ways to figure that
   out)
+* An admin interface for things such as adding/removing users.
 
 Wishlist items (these are very low priority).
 
