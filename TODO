@@ -3,5 +3,7 @@ Things that need to or should be done to make this thing not suck as bad.
 
 * Fix the file locations, everything's pretty random right now.
 * Add functions to take the place of the duplicate code (ie error handling)
+* When moving a link into a folder, make it obvious what the folder layout
+  should be.
 * Allow the user to enter bookmarks from scratch rather than having to use
   the browser buttons.
