@@ -1,0 +1,17 @@
+This project has no name.
+
+How to install:
+
+Create a database (currently only mysql is supported) and dump the schema
+into it (sql/mysql.sql).
+
+Add a user to the database (there is currently no admin interface).  Just
+set the username and password fields in users to plaintext values.
+
+Copy the contents of the src directory to a directory that will let you
+execute them as PHP scripts.
+
+Edit the funcs.php and vars.php files.
+
+Go to whatever you set the $base_uri variable to, type in your username and
+password, and you're all set.
