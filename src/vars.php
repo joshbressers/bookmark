@@ -1,7 +1,7 @@
 <?php
     # $Id$
 
-    $base_uri = 'http://www.bress.net/~bress/bookmark_new/bookmark.php';
+    $base_uri = 'http://your.site/url/bookmark.php';
     $user_found = false;
 
     # Create the string to display the links for this page.
