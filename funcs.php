@@ -121,12 +121,16 @@
                                             $url) {
 
         global $db;
-        $query = 'UPDATE bookmarks SET name=\'?\''
+        $query = 'UPDATE bookmarks SET name=?'
             . ", url=?"
-            . "' WHERE id= ?";
+            . " WHERE id=?";
 
         $sth = $db->prepare($query);
         $result =& $db->execute($sth, array($name, $url, $record_number));
+
+        if (DB::isError($result))
+            die ("update_record_number failed: "
+                . $result->getMessage() . "\n");
 
     }
 
