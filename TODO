@@ -7,3 +7,5 @@ Things that need to or should be done to make this thing not suck as bad.
   should be.
 * Allow the user to enter bookmarks from scratch rather than having to use
   the browser buttons.
+* verify the sql schema is actually the sql schema being used (I don't
+  think it is right now)
