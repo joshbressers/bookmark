@@ -1,0 +1,7 @@
+Things that need to or should be done to make this thing not suck as bad.
+    This may or may not be in order of importance.
+
+* Fix the file locations, everything's pretty random right now.
+* Add functions to take the place of the duplicate code (ie error handling)
+* Allow the user to enter bookmarks from scratch rather than having to use
+  the browser buttons.
