@@ -96,7 +96,7 @@
 
     function get_record_number($username, $record_number) {
         global $db;
-        $bookmarks = get_bookmarks($filename);
+        $bookmarks = get_bookmarks($username);
 
         $found_record = NULL;
 
