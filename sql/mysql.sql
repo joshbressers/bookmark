@@ -23,7 +23,7 @@ CREATE TABLE `bookmarks` (
   `name` varchar(255) NOT NULL default '',
   `url` text NOT NULL,
   `user_id` int(10) unsigned NOT NULL default '0',
-  'order_weight' int(11) NOT NULL default '0',
+  `order_weight` int(11) NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `user_id` (`user_id`)
 ) TYPE=MyISAM;
