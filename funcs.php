@@ -1,5 +1,5 @@
 <?php
-    # $Id: funcs.php 277 2004-10-16 17:53:40Z bress $
+    # $Id$
 
     include_once "vars.php";
     include_once "DB.php";

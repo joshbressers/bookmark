@@ -1,5 +1,5 @@
 <?php
-    # $Id: vars.php 264 2004-10-04 23:32:21Z bress $
+    # $Id$
 
     $base_uri = 'http://www.bress.net/~bress/bookmark_new/bookmark.php';
     $user_found = false;

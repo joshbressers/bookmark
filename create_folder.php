@@ -1,5 +1,5 @@
 <?php
-    # $Id: create_folder.php 200 2004-05-03 14:18:57Z bress $
+    # $Id$
 
     include_once "funcs.php";
     include_once "vars.php";

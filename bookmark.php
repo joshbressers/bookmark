@@ -1,5 +1,5 @@
 <?php
-    # $Id: bookmark.php 271 2004-10-11 14:45:28Z bress $
+    # $Id$
 
     include_once "funcs.php";
     include_once "vars.php";
