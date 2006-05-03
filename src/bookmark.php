@@ -52,14 +52,14 @@
         echo $bookmark[1];
         echo ",'";
         if ($edit_mode) {
-            echo $bookmark[2];
+            echo htmlspecialchars($bookmark[2], ENT_QUOTES);
             echo "<a href=bookmark.php?entry={$bookmark[0]}&move=u>[up]</a> ";
             echo "<a href=bookmark.php?entry={$bookmark[0]}&" .
                 "move=d>[down]</a>";
             echo "','";
             echo "edit_bookmark.php?entry={$bookmark[0]}";
         } else {
-            echo $bookmark[2];
+            echo htmlspecialchars($bookmark[2], ENT_QUOTES);
             echo "','";
             echo $bookmark[3];
         }
