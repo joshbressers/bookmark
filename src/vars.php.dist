@@ -1,6 +1,7 @@
 <?php
     # $Id$
 
+    $dsn = "mysql://bookmark:bookmark@localhost/bookmark";
     $base_uri = 'http://your.site/url/bookmark.php';
     $user_found = false;
 

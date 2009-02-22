@@ -4,7 +4,6 @@
     include_once "vars.php";
     include_once "DB.php";
 
-    $dsn = "mysql://bookmark:bookmark@localhost/bookmark";
     $db = DB::connect($dsn);
     if (DB::isError($db))
         die("Can't connect to database");
