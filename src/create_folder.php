@@ -8,13 +8,13 @@
 
     if (isset($_GET['Create'])) {
         # Somehow delete the entry
-        new_folder($_SERVER['PHP_AUTH_USER'], $_GET['folder']);
+        new_folder($_SESSION['username'], $_GET['folder']);
         header("Location: {$base_uri}");
     } elseif (isset($_GET['Back'])) {
         header("Location: {$base_uri}");
     }
 
-    echo "<html><title> {$_SERVER['PHP_AUTH_USER']}'s " .
+    echo "<html><title> {$_SESSION['username']}'s " .
         "bookmarks</title>";
 
     echo "<form method=get>";

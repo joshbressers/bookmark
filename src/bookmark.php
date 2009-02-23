@@ -8,7 +8,7 @@
 
     do_login();
 
-    $username = $_SERVER['PHP_AUTH_USER'];
+    $username = $_SESSION['username'];
     $edit_mode = false;
 
     # Are we setting a new bookmark, or are we just looking?
@@ -23,7 +23,7 @@
         }
     }
 
-    echo "<html><title> {$_SERVER['PHP_AUTH_USER']}'s " .
+    echo "<html><title> {$_SESSION['username']}'s " .
         "bookmarks</title>";
     echo '<link rel="StyleSheet" href="dtree.css" type="text/css" />';
     echo '<script type="text/javascript" src="dtree.js"></script>';
@@ -71,6 +71,7 @@
     echo "<hr>\n";
     echo "<a href={$_SERVER['SCRIPT_URI']}?edit=1>[Edit]</a>&nbsp;&nbsp;";
     echo "<a href=create_folder.php>[New Folder]</a>&nbsp";
+    echo "<a href=\"login.php?Logout=true\">[Logout]</a>&nbsp";
 
     if ($edit_mode) {
         echo "<a href={$_SERVER['SCRIPT_URI']}>[Back]</a>";

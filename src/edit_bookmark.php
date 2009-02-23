@@ -6,7 +6,7 @@
 
     do_login();
 
-    $username = $_SERVER['PHP_AUTH_USER'];
+    $username = $_SESSION['username'];
 
     if (isset($_GET['Delete'])) {
         # Somehow delete the entry

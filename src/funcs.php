@@ -8,18 +8,25 @@
     if (DB::isError($db))
         die("Can't connect to database");
 
-    function do_login() {
+    function do_login($username = NULL, $password = NULL) {
         global $db;
 
+        session_start();
+
         # Do some sort of authentication here.
-        if (!isset($_SERVER['PHP_AUTH_USER'])) {
+        if (isset($_SESSION['username'])) {
+            # We are making what may be an incorrect assumption, that if
+            # the username session variable is set, they're logged in.
+            return;
+        }
+
+        if (!isset($_SESSION['username']) and !isset($username)) {
             # The user hasn't authenticated yet, complain to them.
 
-            show_login();
+            header('Location: login.php');
+            exit(0);
 
-        } else {
-            $username = $_SERVER['PHP_AUTH_USER'];
-            $password = $_SERVER['PHP_AUTH_PW'];
+        } elseif (!isset($_SESSION['username'])) {
 
             $sth = $db->prepare("SELECT * FROM users where username=?"
                 . " AND password=?");
@@ -34,18 +41,19 @@
             }
 
             if ($user_found) {
-                # Do nothing right now.
+                $_SESSION['username'] = $username;
+                header('Location: bookmark.php');
+                exit(0);
             } else {
-                show_login();
+                header('Location: login.php');
+                exit(0);
             }
         }
     }
 
-    function show_login() {
-        header('WWW-Authenticate: Basic realm="Bookmarks"');
-        header('HTTP/1.0 401 Unauthorized');
-        echo 'You must login';
-        exit;
+    function do_logout() {
+        session_start();
+        unset($_SESSION['username']);
     }
 
     function get_bookmarks($username) {
